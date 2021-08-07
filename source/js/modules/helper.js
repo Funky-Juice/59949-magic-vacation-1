@@ -19,10 +19,10 @@ export const animateDigits = (elem, initVal, lastVal, duration) => {
       lastTime = currentTime;
 
       if (progress >= 1) {
-        window.cancelAnimationFrame(window.requestAnimationFrame(step));
+        return window.cancelAnimationFrame(window.requestAnimationFrame(step));
       }
     }
-    window.requestAnimationFrame(step);
+    return window.requestAnimationFrame(step);
   };
 
   window.requestAnimationFrame(step);
